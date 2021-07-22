@@ -1,0 +1,260 @@
+/***** Header *****/
+header {
+  max-width: 190rem;
+  min-height: 80px;
+  padding: 0 1.4em;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  width: 9rem;
+  color: var(--red);
+}
+
+header select {
+  padding: 0.4rem 1.4rem;
+
+  background: var(--black);
+  color: var(--white);
+  border: 1px solid var(--white);
+  font-size: 15px;
+  border-radius: 0.25rem;
+}
+
+header a {
+  padding: 0.4rem 0.8rem;
+  margin-left: 0.6em;
+  color: var(--white);
+  border-radius: 0.25rem;
+  font-size: 15px;
+  background: var(--red);
+  cursor: pointer;
+}
+
+/***** Main *****/
+.main-section {
+  position: relative;
+  min-height: 46rem;
+  padding: 1.6rem;
+  color: var(--white);
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main-bg {
+  position: absolute;
+  top: -80px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  z-index: -1;
+}
+
+.main-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.main-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.main-bg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.form-input {
+  height: 50px;
+  width: min(100%, 450px);
+  padding: 0 1rem;
+}
+
+.form-button {
+  min-width: 115px;
+  font-size: 1.6rem;
+  padding: 0.6em 1em;
+  margin: 10px 0;
+  border-radius: 0.25rem;
+  background: var(--red);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.offers-section {
+  margin: auto;
+  max-width: 100rem;
+  padding: 5em 2.2em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section-text {
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 1.2em;
+}
+
+.offers-section img {
+  width: min(85%, 600px);
+}
+
+#small {
+  width: min(75%, 400px);
+}
+
+.questions-section {
+  margin: auto;
+  max-width: 100rem;
+  padding: 5em 0;
+  color: var(--white);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.questions-section h2 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.questions-section h3 {
+  padding: 1.5rem 3rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.questions-section > button {
+  width: 100%;
+  margin: 5px 0;
+  padding: 15px 20px;
+  font-size: 1.8rem;
+  color: var(--white);
+  background: var(--gray);
+  text-align: left;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.questions-section > button span {
+  font-size: 18px;
+}
+
+.questions-section form {
+  text-align: center;
+  width: 100%;
+}
+
+.questions-section form input {
+  width: min(90vw, 450px);
+}
+
+main section:not(:first-child) {
+  border-top: 5px solid var(--gray);
+  border-bottom: 5px solid var(--gray);
+}
+
+/***** Footer *****/
+footer {
+  margin: auto;
+  max-width: 900px;
+  padding: 3.5em 1.5em;
+  color: #757575;
+}
+
+.footer-links {
+  margin-top: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.footer-links a {
+  margin-bottom: 10px;
+  color: inherit;
+  font-size: 13px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 500px) {
+  .footer-links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 550px) {
+  html {
+    font-size: 75%;
+  }
+
+  .questions-section {
+    padding: 7rem 4.5rem;
+  }
+}
+
+@media (min-width: 950px) {
+  html {
+    font-size: 85%;
+  }
+
+  .main-section {
+    padding: 12rem;
+  }
+
+  .offers-section {
+    align-items: space-between;
+    flex-direction: row;
+  }
+
+  .section-text {
+    margin: 0;
+    text-align: left;
+    padding-right: 7.5em;
+  }
+
+  .reverse-order .section-text {
+    padding: 0 0 0 4em;
+  }
+
+  .reverse-order img {
+    order: -1;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

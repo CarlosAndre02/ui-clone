@@ -1,0 +1,49 @@
+:root {
+  --black: #080e0e;
+  --white: #ffffff;
+  --red: #e50914;
+  --gray: #303030;
+  --black-bg: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-width: 320px;
+  background: var(--black-bg);
+}
+
+body,
+input,
+button {
+  font-size: 1.4rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-top: 0.7em;
+}
+
+h4 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 0.7em 0;
+}
