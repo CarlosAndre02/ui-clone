@@ -1,0 +1,71 @@
+:root {
+  --purple-bg: #404eed;
+  --white-bg: #fff;
+  --black-bg: #23272a;
+  --light-gray: #f6f6f6;
+  --button-bg: #5865f2;
+
+  --heading-font-family: "Bebas Neue", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-width: 300px;
+  overflow-x: hidden;
+}
+
+body,
+button {
+  font-size: 1.6rem;
+  font-family: "Whitney", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.main-content {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.buttons {
+  padding: 1.6rem 3.2rem;
+  border-radius: 2.8rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.buttons > img {
+  margin-right: 6px;
+}
+
+.header-bg {
+  background: var(--purple-bg);
+}
+
+.purple-bg {
+  background: var(--purple-bg);
+}
+
+.white-bg {
+  background: var(--white-bg);
+}
+
+.light-gray-bg {
+  background: var(--light-gray);
+}
+
+.footer-bg {
+  background: var(--black-bg);
+}
